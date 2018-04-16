@@ -1,6 +1,6 @@
 .body{
 	display: grid;
-	grid-template: repeat(3,auto)/repeat(3,auto);
+	grid-template: 0.5fr 1fr 0.5fr/repeat(3,1fr);
 }
 .calculator{
 	grid-column: 2/3;
