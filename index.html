@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<title>El Runcho's calculator app</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="./scripts.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="./script.js"></script>
 		<link rel="stylesheet" type="text/css" href="./styles.css">
 		<link rel="stylesheet" type="text/css" href="./grid.css">
 	</head>
@@ -11,31 +13,31 @@
 		<div class="body">
 			<div class="calculator">
 				<div class="screenPanel">
-					<div class="title"><h4>El Runcho's Calculator</h4></div>
+					<div class="title"><h4>El RUNCHO'S CALCULATOR</h4></div>
 					<div class="screen">
-						<div id="currentData"><h4>Current</h4></div>
-						<div id="completeData"><h6>Complete</h6></div>
+						<div id="currentData"><h4  id="currentScreen">0</h4></div>
+						<div id="completeData"><h6 id="resumeScreen">0</h6></div>
 					</div>
 				</div>
 				<div class="numPad">
-					<div id="AC" class="key effect"><h3>AC</h3></div>
-					<div id="C" class="key effect"><h3>C</h3></div>
-					<div id="divide" class="key effect"><h3>%</h3></div>
-					<div id="multiply" class="key effect"><h3>*</h3></div>
-					<div id="seven" class="key effect"><h3>7</h3></div>
-					<div id="eigth" class="key effect"><h3>8</h3></div>
-					<div id="nine" class="key effect"><h3>9</h3></div>
-					<div id="minus" class="key effect"><h3>-</h3></div>
-					<div id="four" class="key effect"><h3>4</h3></div>
-					<div id="five" class="key effect"><h3>5</h3></div>
-					<div id="six" class="key effect"><h3>6</h3></div>
-					<div id="plus" class="key effect"><h3>+</h3></div>
-					<div id="one" class="key effect"><h3>1</h3></div>
-					<div id="two" class="key effect"><h3>2</h3></div>
-					<div id="three" class="key effect"><h3>3</h3></div>
-					<div id="equal" class="key effect"><h3>=</h3></div>
-					<div id="cero" class="key effect"><h3>0</h3></div>
-					<div id="decimalDot" class="key effect"><h3>.</h3></div>
+					<div id="AC" class="key effect" onclick='clearAll()'><h3>AC</h3></div>
+					<div id="C" class="key effect" onclick='clearCurrent()'><h3>C</h3></div>
+					<div id="divide" class="operand effect" onclick='operand("/")'><h3>%</h3></div>
+					<div id="multiply" class="operand effect" onclick='operand("*")'><h3>*</h3></div>
+					<div id="seven" class="key effect" onclick='getButton(7)'><h3>7</h3></div>
+					<div id="eigth" class="key effect" onclick='getButton(8)'><h3>8</h3></div>
+					<div id="nine" class="key effect" onclick='getButton(9)'><h3>9</h3></div>
+					<div id="minus" class="operand effect" onclick='operand("-")'><h3>-</h3></div>
+					<div id="four" class="key effect" onclick='getButton(4)'><h3>4</h3></div>
+					<div id="five" class="key effect" onclick='getButton(5)'><h3>5</h3></div>
+					<div id="six" class="key effect" onclick='getButton(6)'><h3>6</h3></div>
+					<div id="plus" class="operand effect" onclick='operand("+")'><h3>+</h3></div>
+					<div id="one" class="key effect" onclick='getButton(1)'><h3>1</h3></div>
+					<div id="two" class="key effect" onclick='getButton(2)'><h3>2</h3></div>
+					<div id="three" class="key effect" onclick='getButton(3)'><h3>3</h3></div>
+					<div id="equal" class="operand effect" onclick='equal()'><h3>=</h3></div>
+					<div id="cero" class="key effect" onclick='getButton(0)'><h3>0</h3></div>
+					<div id="decimalDot" class="key effect" onclick='getButton(".")'><h3>.</h3></div>
 				</div>
 			</div>
 		</div>
